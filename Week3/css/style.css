@@ -1,0 +1,18 @@
+/** Some Variables*/
+a {
+  text-decoration: none;
+}
+
+h1 {
+  padding: 2rem;
+  background-color: #ccffff;
+}
+
+h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: .5rem;
+  background-color: #e5e500;
+}
+/*# sourceMappingURL=style.css.map */

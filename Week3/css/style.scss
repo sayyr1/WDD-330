@@ -1,0 +1,16 @@
+/** Some Variables*/
+$h1_color: #ccffff;
+$h2_color: #e5e500;
+
+a{
+    text-decoration: none;
+}
+h1{
+    padding: 2rem;
+    background-color: $h1_color;
+}
+h2{
+    width: fit-content;
+    padding: .5rem;
+    background-color: $h2_color;
+}

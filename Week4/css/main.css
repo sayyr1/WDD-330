@@ -1,0 +1,84 @@
+main{
+    /* width: 300px; */
+    /* border: solid 1px black; */
+    height: 400px;
+    display: block;
+}
+div.row-1{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+
+}
+/* div.row-1 div:nth-child(1){
+    border: none;
+}
+div.row-1 div:nth-child(2){
+    border-top: none;
+}
+div.row-1 div:nth-child(3){
+    border: none;
+} */
+
+
+
+
+div.row-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    
+ }
+ /* div.row-2 div:nth-child(1){
+     border-left: none;
+ }
+
+ div.row-2 div:nth-child(3){
+    border-right: none;
+    border-left: none;
+} */
+
+
+ div.row-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+ }
+/* div.row-3 div:nth-child(1){
+    border: none;
+}
+div.row-3 div:nth-child(3){
+    border: none;
+}
+div.row-3 div:nth-child(2){
+    border-bottom: none;
+    border-top: none;
+} */
+
+
+ div.row-1 div,  div.row-2 div, div.row-3 div{
+     border: black solid 1px;
+     /* width: 50%;
+     height: 50%; */
+ }
+ .x::before{
+    
+     content: "X";
+     align-self: center;
+     justify-self: center;
+     font-size: 20rem;
+ }
+ .y::before{
+    
+    content: "Y";
+    align-self: center;
+    justify-self: center;
+    font-size: 20rem;
+}

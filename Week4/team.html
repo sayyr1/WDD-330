@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ugt-8">
+    <title>Team Activity</title>
+
+    <style>
+        body {
+            max-width: 50rem;
+            max-height: 30rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        main {
+
+            height: 400px;
+            display: block;
+        }
+
+        div.row-1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+
+        }
+
+        div.row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+
+        }
+
+        div.row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+
+        }
+
+        div.row-1 div,
+        div.row-2 div,
+        div.row-3 div {
+            border: black solid 1px;
+
+        }
+
+        .x::before {
+
+            content: "X";
+            align-self: center;
+            justify-self: center;
+            font-size: 20rem;
+        }
+
+        .y::before {
+
+            content: "O";
+            align-self: center;
+            justify-self: center;
+            font-size: 20rem;
+        }
+        .block{
+            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        }
+
+        /** Stretch*/
+
+         div.row-3 div:nth-child(1) {
+             border: none;
+        }
+
+        div.row-3 div:nth-child(3) {
+            border: none;
+        }
+
+        div.row-3 div:nth-child(2) {
+            border-bottom: none;
+            border-top: none;
+        }
+
+        div.row-2 div:nth-child(1) {
+            border-left: none;
+            border-right: none;
+
+            
+        }
+
+        div.row-2 div:nth-child(3) {
+            border-right: none;
+            border-left: none;
+        }
+
+        div.row-1 div:nth-child(1) {
+            border: none;
+        }
+
+        div.row-1 div:nth-child(2) {
+            border-top: none;
+            border-bottom: none;
+
+        }
+
+        div.row-1 div:nth-child(3) {
+            border: none;
+        } 
+
+
+    </style>
+</head>
+
+<body>
+    <main class="board">
+        <div class="row-1">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <div class="row-2">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <div class="row-3">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <button class="button">RESET</button>
+    </main>
+
+    <script>
+        const board = document.querySelector(".board");
+        board.addEventListener('click', touchX)
+        const squares = document.querySelectorAll('.block');
+        squares.forEach(block => block.addEventListener('click', touchY));
+
+
+        function touchX(e) {
+            let times = e.currentTarget;
+            times.clicks = (times.clicks || 0) + 1;
+            console.log(times.clicks);
+            return times.clicks;
+
+        }
+
+        function touchY() {
+            let i = 2;
+            if ((board.clicks + 1) % 2 === 0) {
+                this.classList.toggle('y');
+            } else {
+                this.classList.toggle('x');
+            }
+        }
+
+        const button = document.querySelector('.button');
+
+
+        button.addEventListener('click', finish);
+
+        function finish() {
+          for(square of squares){
+              square.classList = "block";
+          }
+
+        }
+    </script>
+
+</html>

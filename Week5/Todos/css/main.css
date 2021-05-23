@@ -1,0 +1,28 @@
+.body {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  border: 1px solid black;
+}
+.body div.erase{
+  display: none;
+}
+ div.task, div.footer {
+  width: 14.5rem;
+  border: none;
+  border-bottom: 1px solid;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.task input[type="text"] {
+  border: none;
+}
+div.task div{
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

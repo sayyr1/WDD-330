@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Chapter 13</title>
+    <link href="/WDD-330/css/style.css" rel="stylesheet">
+    <script src="js/ajax.js"></script>
+</head>
+<body>
+<section>
+    <h1>
+        Ajax
+    </h1>
+    <p>Ajax is a technique that allows web pages to communicate asynchronously with a server. </p>
+    <h2>The Fetch API</h2>
+    <p> which is currently a living
+        standard for requesting and sending data asynchronously across a network. </p>
+    <h3>Basic Usage</h3>
+    <p>
+        The Fetch API provides a global fetch() method that only has one mandatory
+        argument, which is the URL of the resource you wish to fetch.
+    </p>
+    <p>
+        This is an example<br>
+        fetch('https://example.com/data')<br>
+        .then( // code that handles the response )<br>
+        .catch( // code that runs if the server returns an error )<br>
+    </p>
+    <h3>JSON Responses</h3>
+    <p>JSON is probably the most common format for AJAX responses. The json()
+        method is used to deal with these by transforming a stream of JSON data into a
+        promise that resolves to a JavaScript object.</p>
+
+</section>
+<section>
+    <h2>Example</h2>
+    <p>const url = 'https:example.com/data';<br>
+        const headers = new Headers({ 'Content-Type': 'text/plain',<br>
+        ➥ 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate<br>
+        })<br>
+        const request = (url,{<br>
+        headers: headers<br>
+        })<br>
+        fetch(request)<br>
+        .then( function(response) {<br>
+        if(response.ok) {<br>
+        return response;<br>
+        }<br>
+        throw Error(response.statusText);<br>
+        })<br>
+        .then( response => // do something with response )<br>
+        .catch( error => console.log('There was an error!') )<br>
+
+    </p>
+</section>
+
+</body>
+</html>

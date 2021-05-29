@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chapter 7 "Further Functions"</title>
+</head>
+
+<body>
+    <header>
+        <h1>Further Functions</h1>
+        <p>In JavaScript, functions are first-class objects, which means
+            they can be passed around in the same way as every other value.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Fuction Properties adn Methods</h2>
+        </section>
+        <section>
+            <h3>
+                Call and Apply Methods
+            </h3>
+            <p>The
+                call()
+                method can be used to set the value of
+                this
+                inside a function to an
+                object that is provided as the first argument.</p>
+            <p>
+                The
+                apply()
+                method works in the same way, except the arguments of the
+                function are provided as an array, even if there is only one argument:
+            </p>
+            <h3>Memoization</h3>
+            <p>If a function takes some time to compute a return value, we can save the result in
+                a cache property. Then if the same argument is used again later, we can return the
+                value from the cache, rather than having to compute the result again.</p>
+            <h3> Inmediately Invoked Function Expression(IIFE)
+            </h3>
+            <p>is
+                an anonymous function that, as the name suggests, is invoked as soon as it’s
+                defined.
+                This is easily achieved by placing parentheses at the end of the function
+                definition (remember we use parentheses to invoke a function).
+                (function(){<br>
+                const temp = 'World';<br>
+                console.log(`Hello ${temp}`);<br>
+                })();<br>
+                << 'Hello World' <br>
+            </p>
+        </section>
+        <section>
+            <h2>
+                Functions that Define and Rewrite Themselves
+            </h2>
+            <p>
+                The dynamic nature of JavaScript means that a function is able to not only call
+                itself, but define itself, and even redefine itself.
+            </p>
+            <p>
+                function party(){<br>
+                console.log('Wow this is amazing!');<br>
+                party = function(){<br>
+                console.log('Been there, got the T-Shirt');<br>
+                }<br>
+                }<br>
+            </p>
+            <h2>
+                Recursive Functions
+            </h2>
+            <p>A recursive function is one that invokes itself until a certain condition is met.</p>
+            <p>function factorial(n) {<br>
+                if (n === 0) {<br>
+                return 1;<br>
+                } else {<br>
+                return n * factorial(n - 1);<br>
+                }<br>
+                }</p>
+            <h2>Callbacks</h2>
+            <p>You’ll recall that they’re functions passed to
+                other functions as arguments and then invoked inside the function they are
+                passed to.</p>
+            <h2>Event-driven Asynchronous Programming</h2>
+            <p>Callbacks can be used to facilitate event-driven asynchronous programming.</p>
+            <h2>Callback Hell</h2>
+            <p>Callback hell is the term used to refer to this tangled mess of code.</p>
+            <h3>Async Functions</h3>
+            <p>. These functions are
+                preceded by the
+                async
+                keyword and allow you to write asynchronous code as if it
+                was synchronous.</p>
+            <h3>Generalized Functions</h3>
+            <p>Instead of having lots
+                of specific functions, one function can be written that accepts a callback</p>
+            <h3>
+                Functions That Return Functions
+            </h3>
+            <p>
+                We’ve just seen that functions can accept another function as an argument (a
+                callback), but they can also return a function.
+            </p>
+        </section>
+        <section>
+            <h2>Closures</h2>
+            <p>Closures are one of JavaScript’s most powerful features, but they can be difficult
+                to get your head around initially.</p>
+                <h2>Currying</h2>
+                <p>Currying is a process that involves the partial application of functions.</p>
+        </section>
+    </main>
+    <script src="js/further_functions.js"></script>
+</body>
+
+</html>

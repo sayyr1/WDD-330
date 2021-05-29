@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="uft-8">
+    <title>Todos</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Todos</h1>
+        <h2>List of Tasks</h2>
+
+    </header>
+    <main>
+        <div class="tasks-container">
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <span id="list-count"> tasks left</span>
+            <button>All</button>
+            <button id="active_task">Active</button>
+            <button id="completed_task">Completed</button>
+        </div>
+        <form id="adding-form">
+            <input data-new-list-input id="enter" type="text">
+            <input id="ad" type="button" value="+">
+        </form>
+    </footer>
+
+
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox" />
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+            <button class="eliminate" id="eliminate" type="checkbox" value="X">
+        </div>
+    </template>
+    <script src="js/ls.js"></script>
+
+</body>
+
+</html>

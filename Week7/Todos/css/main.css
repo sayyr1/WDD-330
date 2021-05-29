@@ -1,0 +1,18 @@
+.body {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.body div.task {
+  border: none;
+  border-bottom: 1px solid;
+  height: 2rem;
+}
+
+div.task input[type="text"] {
+  border: none;
+}
+/*# sourceMappingURL=main.css.map */

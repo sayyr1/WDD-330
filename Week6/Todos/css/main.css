@@ -13,7 +13,7 @@ header h1 {
   color: #dd6316;
   -webkit-box-shadow: 0px -1px 6px 1px #a87070;
           box-shadow: 0px -1px 6px 1px #a87070;
-  font-size: 2rem;
+  font-size: 6rem;
   background-color: #f8f8f8;
 }
 
@@ -91,8 +91,7 @@ div.task {
 
 @media only screen and (min-width: 64em) {
   div.task {
-    width: 20rem;
-    width: 23rem;
+    width: 39rem;
     font-size: 1.5rem;
     height: 2.2rem;
   }

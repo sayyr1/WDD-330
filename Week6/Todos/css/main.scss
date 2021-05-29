@@ -1,0 +1,210 @@
+// Color Variables
+
+$background_color: #b6636373;
+$main_color: #5CB0FF;
+$tasks_color: #d5cbdb;
+$header_color: #f8f8f8;
+
+// Size Variables
+$large_size: 64em;
+
+// For sizes
+@mixin MQ($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Odibee+Sans&display=swap');
+
+html {
+    
+    font-family: 'Nunito', sans-serif;
+
+    background-color: white;
+   
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+header {
+    text-align: center;
+    h1{
+        font-family: 'Odibee Sans', cursive;
+        color: #dd6316;
+        box-shadow: 0px -1px 6px 1px #a87070;
+        font-size: 2rem;
+        background-color: $header_color;
+        @include MQ($large_size){
+            font-size: 3rem; 
+        }
+    }
+    h2{
+        @include MQ($large_size){
+            font-size: 1.2rem;
+            margin-left: 10px
+        }
+        text-align: left;
+        font-size: 2.5rem;
+    }
+}
+body {
+    display: block;
+    @include MQ($large_size){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+div.todoContainer {
+    grid-column: 2/3;
+    background-color: $background_color;
+    border-radius: 1rem;
+    box-shadow: 5px 7px 5px 2px #cfd9e1;
+    width: 100%;
+
+}
+
+main {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: flex-start;
+
+}
+
+div.task {
+    background-color: $tasks_color;
+    font-size: 3rem;
+    width: 60rem;
+    justify-content: space-between;
+    align-content: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    display: flex;
+    border-radius: 9px;
+
+    @include MQ($large_size){
+        width: 20rem;
+        width: 23rem;
+        font-size: 1.5rem;
+        height: 2.2rem;
+    }
+   
+}
+
+[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+}
+input.check{
+    margin-top: 13px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    @include MQ($large_size){
+        width: 25px;
+        margin-top: -1px;
+    }
+
+}
+.buttons {
+    border: none;
+    outline: none;
+    padding: 7px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 3px;
+    &:hover{
+        transform: scale(1.1);
+
+    }
+}
+
+
+    button.eliminate{
+        margin-top: 5px;
+        font-size: 3rem;
+        width: 4rem;
+        height: 3.5rem;
+        border-radius: 2rem;
+        border: none;
+        @include MQ($large_size){
+            width: 36px;
+            height: 34px;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+    &:hover{
+        transform: scale(1.07);
+        background-color: $background_color;
+    }
+    }
+
+
+/* Style the active class (and buttons on mouse-over) */
+.active,
+.buttons:hover {
+    background-color: #666;
+    color: white;
+}
+
+/*Footer*/
+footer{
+    button {
+    font-size: 1.5rem;
+    @include MQ($large_size){
+        font-size: 1rem;
+
+    }
+    }
+}
+form#adding-form {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0 6px 10px;
+   
+
+    input#enter {
+        width: 100%;
+        padding: 7px;
+        border-radius: 3px;
+        border: none;
+        font-size: 2rem;
+        @include MQ($large_size){
+            font-size: 1rem;
+        }
+    }
+
+    input#ad {
+        width: 15%;
+        padding: 7px;
+        border-radius: 3px;
+        border: none;
+        margin: 0px 10px 0 9px;
+        font-size: 2rem;
+        @include MQ($large_size){
+            font-size: 1rem;
+        }
+
+    }
+
+    input#ad:hover {
+        transform: scale(1.1);
+        background-color: $background_color;
+    }
+}
+#list-count{
+    font-size: 2rem;
+    @include MQ($large_size){
+        font-size: 1rem;
+    }
+}
+label{
+    margin-top: 2px;
+}

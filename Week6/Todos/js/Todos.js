@@ -30,7 +30,6 @@ taskContainer.addEventListener('click', e => {
         selectedTask.complete = e.target.checked;
         renderTaskCount(selectedTask);
         save();
-        // console.log(selectedTask.complete);
     }
 })
 /** Delete tasks */

@@ -35,7 +35,7 @@ header {
         font-family: 'Odibee Sans', cursive;
         color: #dd6316;
         box-shadow: 0px -1px 6px 1px #a87070;
-        font-size: 2rem;
+        font-size: 6rem;
         background-color: $header_color;
         @include MQ($large_size){
             font-size: 3rem; 

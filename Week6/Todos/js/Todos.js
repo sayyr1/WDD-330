@@ -33,4 +33,20 @@ taskContainer.addEventListener('click', e => {
         // console.log(selectedTask.complete);
     }
 })
+/** Delete tasks */
+function deleteTask(taskId) {
+    let index = tasks.map(task => task.id).indexOf(taskId);
+    console.log(index);
+    tasks.splice(index, 1)
+    saveAndRender();
+}
+
+taskContainer.addEventListener('click', e => {
+    if (e.target.tagName.toLowerCase() === 'button') {
+        console.log(e.target.parentElement.id)
+
+        deleteTask(e.target.parentElement.id)
+    }
+
+})
 render();

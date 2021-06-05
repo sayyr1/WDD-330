@@ -73,29 +73,35 @@
 
       // Array.prototype.filter()
       // 1. Filter the list of inventors for those who were born in the 1500's
-        const years1 = inventors.filter(x =>(x.year >= 1500) && (x.year <= 1600));
-        console.log(years1);
+      //   const years1 = inventors.filter(x =>(x.year >= 1500) && (x.year <= 1600));
+      //   console.log(years1);
+
+      const years = inventors.filter(x => (x.year >= 1500) && (x.year <= 1600));
+      console.table(years);
 
         
       // Array.prototype.map()
       // 2. Give us an array of the inventors' first and last names
 
-      const toMap = inventors.map(inventors => `${inventors.first} ${inventors.last}`);
-      console.log(toMap);
+      // const toMap = inventors.map(inventors => `${inventors.first} ${inventors.last}`);
+      // console.log(toMap);
+      const names = inventors.map(inventors => `${inventors.first} ${inventors.last}`);
+      console.log(names)
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
-      const sorted = inventors.sort((a,b ) => b.year - a.year);
-      console.log(sorted);
+      // const sorted = inventors.sort((a,b ) => b.year - a.year);
+      // console.log(sorted);
+      const sorteByBirthdate = inventors.sort()
 
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live?
-      const reduce = inventors.reduce((acc,current) => acc + (current.passed - current.year), 0);
-      console.log(reduce);
+      // const reduce = inventors.reduce((acc,current) => acc + (current.passed - current.year), 0);
+      // console.log(reduce);
 
       // 5. Sort the inventors by years lived
-      const sorted2 = inventors.sort((a,b) => a.year - b.year);
-      console.log(sorted2);
+      // const sorted2 = inventors.sort((a,b) => a.year - b.year);
+      // console.log(sorted2);
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -107,8 +113,8 @@
 
       // 7. sort Exercise
       // Sort the people alphabetically by last name
-      const sort3 = people.sort((a, b) => a.split(',')[0].localeCompare(b.split(',')[0]));
-      console.log(sort3);
+      // const sort3 = people.sort((a, b) => a.split(',')[0].localeCompare(b.split(',')[0]));
+      // console.log(sort3);
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these

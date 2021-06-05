@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajax Chapter 13</title>
-    <link href="/WDD-330/css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <script src="js/ajax.js"></script>
 </head>
 <body>
+<section>
+    <ol>
+        <li><a href="ajax_demonstration.html" target="_blank">Ajax Demonstration</a></li>
+        <li><a href="sending_information.html" target="_blank">Sending Information</a></li>
+    </ol>
+</section>
+
 <section>
     <h1>
         Ajax
@@ -36,7 +43,7 @@
     <h2>Example</h2>
     <p>const url = 'https:example.com/data';<br>
         const headers = new Headers({ 'Content-Type': 'text/plain',<br>
-        ➥ 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate<br>
+         'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate<br>
         })<br>
         const request = (url,{<br>
         headers: headers<br>

@@ -52,8 +52,8 @@ function showHikeDetails () {
         ${createDetailComponent(hike)}
         <a href="index.html">Back</a>`
     const addBtn = document.getElementById('addBtn');
-    addBtn.addEventListener('click', addComment);
-
+     addBtn.addEventListener('click', pushingToLocalStore);
+    
 }
 
 function createHikeComponent (hike) {
@@ -93,43 +93,28 @@ function createDetailComponent(hike) {
 }
 
 
-
-function addComment (e) {
-    const commentsContent = document.querySelector('.comments');
-    const commentsEntry = document.getElementById('entry').value;
-
-
-   commentsContent.appendChild(createCommentElement(comment.toString()));
-   const commentToLocalStore = comments(commentsEntry, null);
-    comment.push(commentToLocalStore);
-    console.log(comment)
-    createCommentElement();
-    save();
-
+function pushingToLocalStore(){
+    const EntryInput = document.getElementById('entry').value;
+     if (EntryInput == null || EntryInput == '') return;
+     const list = comments(EntryInput, null);
+     comment.push(list);
+     save();
+      createCommentElements();
 }
-
-function saveComment (content){
-
-}
-
-createCommentElement();
-
- function createCommentElement (comment) {
-     const list = document.createElement('li');
-     const entry = document.createElement('span')
+ function createCommentElements(){
+     comment.forEach( comments => {
+     const commentContainer = document.createElement('div');
+     const commentList = document.createElement('li');
      const date = document.createElement('span');
-     entry.innerHTML = comment;
-     list.appendChild(entry);
-     return list;
-}
-
-// function addComment() {
-//     const input = document.querySelector('.add');
-//     const commentInput = input.value;
-//     const listComments = comments(commentInput, null)
-//     console.log(listComments);
-//     comment.push(listComments);
-// }
+     date.innerHTML = comments.date;
+     const content = document.createElement('span');
+     content.innerHTML = comments.content;
+     commentContainer.appendChild(commentList);
+     commentList.appendChild(date);
+     commentList.appendChild(content);
+     })
+ }
+ 
 
  function comments(input, hike){
    return{
@@ -155,4 +140,5 @@ createCommentElement();
  let comment = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
  console.log(comment);
 
+ console.log(createCommentElements());
 

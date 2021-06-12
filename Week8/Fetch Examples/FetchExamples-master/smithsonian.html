@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Smithsonian</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        input {
+            border-radius: 20px;
+            background-color: lightsteelblue;
+        }
+
+        td, th {
+            border: 1px solid;
+            padding: 8px;
+        }
+
+        .ATOZ { background-image: linear-gradient(180deg, lightgray, darkgrey); }
+        .ZTOA { background-image: linear-gradient(180deg, darkgrey, lightgray); }
+
+        tr:nth-child(odd) { background-color: lightgray; }
+        tr:nth-child(even) { background-color: darkgrey; }
+    </style>
+</head>
+
+<body>
+    <label for="Search">Search the Smithsonian archives then tab out</label>
+    <input type="text" id="Search">
+    <table id='sortedTable'>
+        <thead>
+            <tr><td onclick='callSort(this, 0)'>Title</td></tr>
+        </thead>
+        <tbody id='list'>
+        </tbody>
+    </table>
+</body>
+<script>
+    let search = document.getElementById('Search');
+    search.addEventListener('blur', Search);
+
+    function Search() {
+
+        // https://api.data.gov/docs/si/
+        // https://edan.si.edu/openaccess/apidocs/
+        // https://api.data.gov/signup/                //  to get a key
+
+        //  https://api.usa.gov/crime/fbi/sapi/api/data/arrest/agencies/all/dui/offense/01%2F01%2F2020/12%2F20%2F2020?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv
+        //  https://api.usa.gov/crime/fbi/sapi/{desired_endpiont}?api_key=<API_KEY>
+        //  https://api.usa.gov/crime/fbi/sapi/api/agencies?api_key=SGbN3A7rycjJ1AvdyVOV7irtOnBFf7HuxVyOSJXW
+
+        let tableBody = document.getElementById('list');
+
+        let key = 'SGbN3A7rycjJ1AvdyVOV7irtOnBFf7HuxVyOSJXW';
+
+        let searchTerm = this.value;
+
+        fetch(`https://api.si.edu/openaccess/api/v1.0/search?q=${searchTerm}&api_key=${key}`)
+            .then(resp => resp.json()) //  wait for the response and convert it to JSON
+            .then(things => { //  with the resulting JSON data do something
+                var list = things.response.rows.map(x => ({
+                    link: x.content.descriptiveNonRepeating.guid,
+                    title: x.title
+                }))
+                tableBody.innerHTML = list.map(b =>
+                    `<tr><td><a href=${b.link}>${b.title}</a></td></tr>`
+                ).join("\n");
+            });
+    }
+    
+    //--------------------------------------------------------------------------
+    //		our sorting algorithms
+    //--------------------------------------------------------------------------
+    var lastSortCol = null;
+
+    function callSort(ele, column) {
+        ele.className = (ele.className == "ATOZ" || ele.className.length == 0) ? "ZTOA" : "ATOZ";
+        if (lastSortCol !== null && lastSortCol !== ele)
+            lastSortCol.className = "";
+        lastSortCol = ele;
+        return sort_table_rows('sortedTable', column, (ele.className == "ATOZ") ? 1 : -1)
+    }
+
+    var is_number_pattern = /^\d+(\.\d+)?$/;
+    /* Column 0 is the first column */
+    function sort_table_rows(id, column_number, sortOrder) {
+
+        function sort_by_chosen_column(a, b) {
+            /* Fetch the text from the row, excluding spaces */
+            a = a.cells.item(column_number);
+            a = (a.innerText || a.textContent);
+            a = a.replace(/^\s+/, "").replace(/\s+$/, "");
+
+            b = b.cells.item(column_number);
+            b = (b.innerText || b.textContent);
+            b = b.replace(/^\s+/, "").replace(/\s+$/, "");
+
+            /* Special handling for numbers */
+            if (a.match(is_number_pattern) && b.match(is_number_pattern)) return (parseFloat(a) - parseFloat(
+                b)) * sortOrder;
+
+            /* All the rest is alphabetical order */
+            else if (a < b) return -1 * sortOrder;
+            else if (a > b) return 1 * sortOrder;
+            else return 0;
+        }
+
+        var table = document.getElementById(id);
+        /*
+         * To skip the header, ask for the tbodies. 
+         * You actually can have more than one.
+         */
+        for (var i = 0; i < table.tBodies.length; i++) {
+            var tbody = table.tBodies.item(i);
+            /* Move into an array */
+            var rows = [];
+            while (tbody.rows.length > 0) {
+                rows.push(tbody.rows.item(0));
+                tbody.deleteRow(0);
+            }
+            /* Sort the array */
+            rows = rows.sort(sort_by_chosen_column);
+            /* Move back out */
+            while (rows.length > 0)
+                tbody.appendChild(rows.shift());
+        }
+        return false;
+    }
+</script>
+
+</html>

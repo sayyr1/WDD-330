@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>APIS Gone Wild</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <ul class="nav navbar-nav">
+                    <li><a href='allcoins.html'>Crypto Currency</a></li>
+                    <li><a href='covid19.html'>COVID 19</a></li>
+                    <li><a href='realEstate.html'>Real Estate</a></li>
+                    <li><a href='smithsonian.html'>Smithsonian</a></li>
+                    <li><a href='moreBooks.html'>More Books</a></li>
+                    <li><a href='baseball.html'>Baseball</a></li>
+                    <li><a href='validate.html'>Validation</a></li>
+                    <li><a href='basketball.html'>Basketball</a></li>
+                    <li><a href='stars.html'>Stars</a></li>
+                    <li><a href='weather.html'>Weather</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <label for="json">Show JSON</label>
+    <input type="checkbox" id="json">
+    <br>
+    <fieldset>
+        <legend>Search for Movies:</legend>
+        <label for="movie">Search Movies</label>
+        <input type="text" id="movie">
+        <button id="getMovies">Get Moves</button>
+        <div id="movieList" class='grid-container'></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Get the Weather Forecast:</legend>
+        <label for="allDays">Show Full Forecast:</label>
+        <input type="checkbox" id="allDays">
+        <label for="city">Get the Weather For:</label>
+        <input type="text" id="city" value='Fort Worth'>
+        <br>
+        <label for="lat">Latitude</label>
+        <input type="text" id="lat">
+        <label for="lon">Longitude</label>
+        <input type="text" id="lon">
+        <button id="getWeather">Get Weather</button>
+        <div id="weatherList" class='grid-container'></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Astronomy Picture of the Day:</legend>
+        <label for="queryDate">NASA APOD</label>
+        <input type="date" id="queryDate">
+        <button id="getNasa">Get APOD for Date</button>
+        <div class='grid-container'>
+            <div class="grid-item">
+                <h2 id="date"></h2>
+                <h2 id="title"></h2>
+                <div id=media></div>
+                <p id="explanation"></p>
+            </div>
+        </div>
+    </fieldset>
+
+    <a href="https://github.com/gtjames/FetchExamples">Link to GitHub repo</a>
+    <script src="js/examples.js" type="module"></script>
+
+</body>
+
+</html>

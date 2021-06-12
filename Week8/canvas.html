@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<!--<section>-->
+<!--    <canvas id="myCanvas" class="myCanvas" width="200" height="200">-->
+<!--        Sorry! Your browser doesn’t support Canvas.-->
+<!--    </canvas>-->
+    <canvas id="demo3">
+
+    </canvas>
+    <h2>Demo 5: Saving canvas drawings</h2>
+    <canvas width="200" height="200" id="demo5" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+    <button name="saveButton" id="saveButton">Save Drawing</button>
+</section>
+<section>
+    <h2>Demo 6: Drawing an image to the canvas</h2>
+    <canvas width="200" height="200" id="demo6" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+    <img src="https://images.unsplash.com/photo-1623250015445-92c106ed4430?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80" id="myImageElem"
+    width="50px" height="50px">
+</section>
+<section>
+    <h2>Demo 7: </h2>
+    <canvas width="200" height="200" id="demo7" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+    <img src="https://images.unsplash.com/photo-1623250015445-92c106ed4430?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80" id="secondImage"
+         width="200px" height="200px">
+</section>
+<section> <h2>Drawing in SVG</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <circle cx="50" cy="50" r="25" fill="red"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 400">
+        <desc>Drawing a rectangle</desc>
+        <rect x="10" y="10" width="100" height="100"
+              fill="blue" stroke="red" stroke-width="3" />
+    </svg>
+    <div>
+        <p>
+        One open source tool that you can use to make
+        SVG images is Inkscape, which is available for download at http://inkscape.org/.</p>
+    </div>
+</section>
+<script src="js/canvas.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.myCanvas {
+  border: dotted 2px black;
+  margin: 0 20px;
+}
+
+div.container {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+}
+
+div.square {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+div.square {
+  transition: all 4s;
+}
+
+div.square:hover {
+  transform: scale(2);
+  background-color: blue;
+}
+
+div.circle {
+  border-radius: 20rem;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  animation: leftToRight 1s linear infinite;
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateY(-10%);
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5 APIs</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<h1>HTML 5 APIs</h1>
+<p>Html5 added a large number of new features.</p>
+<section>
+    <h2>The data Attribute</h2>
+    <p>The
+        data-
+        attribute is a way of embedding data in a web page using custom
+        attributes that are ignored by the browser.</p>
+    <p>We need to start with 'data' Examples:</p>
+    <article>
+        data-user = 'DAZ'<br>
+        data-name = 'Sayri'
+    </article>
+    <p>We can access using "dataset" "getAttribute"</p>
+</section>
+<section>
+    <h2>HTML5 APIs</h2>
+    <p>The HTML5 specification contains a number of APIs that help to gain access to
+        hardware, such as cameras, batteries, geolocation, and the graphics card.</p>
+    <h3>HTML5 Web storage</h3>
+    <p>Key value that stores in client's computers, similar as cookies but fewer restrictions.</p>
+    <div>
+        <h3>Example Using Local Storage</h3>
+        <form class="form">
+            <ul class="display"></ul>
+            <input data-input type="input">
+            <input type="button" value="Enter">
+        </form>
+    </div>
+</section>
+<section>
+    <h3>Geological API</h3>
+    <p>Provides a useful interface for adding location-based information to a website or application.</p>
+</section>
+<section>
+    <h2>A Factorizing Example</h2>
+    <button id='rainbow'>Change Color</button>
+    <form class="form">
+        <label for='number'>Enter a Number to
+            Factorize:</label>
+        <input id='number' type='number' name='number' min=1
+               value='20'>
+        <button type='submit'>Submit</button>
+    </form>
+    <div id='output'></div>
+</section>
+<section>
+    <h2>Notification</h2>
+    <p>. This is usually a popup in the corner of the screen, but it changes
+        depending on the operating system.</p>
+</section>
+<section>
+    <h2>Multimedia</h2>
+    <audio src="media/music.mp3">This is audio</audio>
+    <video src="media/video.mov"></video>
+</section>
+<section>
+    <h2>Canvas</h2>
+    <canvas id='canvas' width='400' height='400'>Sorry,
+         but your browser does not support the canvas
+        element</canvas>
+</section>
+<script src="js/localStora.js"></script>
+<script src="js/html_api.js"></script>
+</body>
+</html>

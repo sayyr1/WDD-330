@@ -5,67 +5,13 @@
     <title>Team</title>
 </head>
 <body>
-<section>
+<section class="container">
     <h2>Fetch Example</h2>
     <div class="display"></div>
     <button class="btn1">Display</button>
-    <button class="btn2">Prev</button>
-    <button class="btn3">Next</button>
 </section>
 </body>
-<script>
-    const api = "https://swapi.dev/api/people";
-    const display = document.querySelector('.display');
-    const btn1 = document.querySelector('.btn1');
-    const btn2 = document.querySelector('.btn3');
-    const btn3 = document.querySelector('.btn2');
-    btn1.addEventListener('click', displayNames)
-    btn2.addEventListener('click', displayNext)
-    btn3.addEventListener('click', displayPrev)
-
-    displayPrev
-
-    function displayNames() {
-        fetch(api)
-            .then((response) => response.json())
-            .then(data => {
-                console.log(data);
-                display.innerHTML = data.results.map(result => `${result.name}<br>`);
-            })
-    }
-
-    function displayNext() {
-        fetch(api)
-            .then((response) => response.json())
-            .then(data => {
-                console.log(data.next);
-                fetch(data.next)
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data);
-                        data
-                            display.innerHTML = data.results.map(result => `${result.name}<br>`);
-                    })
-            })
-
-    }
-
-    function displayPrev() {
-        fetch(api)
-            .then((response) => response.json())
-            .then(data => {
-                console.log(data.previous);
-                fetch(data.previous)
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data);
-                        data.forEach(
-                            display.innerHTML = data.results.map(result => `${result.name}<br>`));
-                    })
-            })
-
-    }
-
+<script src="team.js">
 
 </script>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using Fetch</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<style>
+ .display{
+     width: 300px;
+     height: 300px;
+     display: grid;
+     align-items: center;
+ }
+.display p{
+    font-size: 2rem;
+}
+img{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+input[type="button"]{
+    font-size: 15px;
+    background-color: #996868;
+    color: white;
+    padding: 10px;
+}
+</style>
+<body>
+<section>
+    <h1>Using Fetch</h1>
+    <p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such
+        as requests and responses. </p>
+    <article>
+        <strong>This is an example of request.</strong><br>
+        fetch('http://example.com/movies.json')<br>
+        .then(response => response.json())<br>
+        .then(data => console.log(data));<br>
+    </article>
+    <section>
+        <h2>Checking that the fetch was successful.</h2>
+        <p>A fetch() promise will reject with a TypeError when a network error
+            is encountered or CORS is misconfigured on the server-side.</p>
+        <article>
+            fetch('flowers.jpg')<br>
+            .then(response => {<br>
+            if (!response.ok) {<br>
+            throw new Error('Network response was not ok');<br>
+            }<br>
+            return response.blob();<br>
+            })<br>
+            .then(myBlob => {<br>
+            myImage.src = URL.createObjectURL(myBlob);<br>
+            })<br>
+            .catch(error => {<br>
+            console.error('There has been a problem with your fetch operation:', error);<br>
+            console.error('There has been a problem with your fetch operation:', error);<br>
+            });<br>
+        </article>
+    </section>
+    <section>
+        <h3>Fetch Example</h3>
+        <p>Displaying random cat images.</p>
+        <div data-container class="container">
+            <div class="display">
+                <p>This is cat placeholder.</p>
+            </div>
+            <input type="button" value="Display new cat">
+        </div>
+    </section>
+</section>
+<script src="js/fetch.js"></script>
+</body>
+</html>

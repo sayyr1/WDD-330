@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airport Information</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
+    <!--Font Links-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="hero">
+            <div class="logo-block">
+                <img class="logo" src="./src/plane_icon.png" alt="plane-icon">
+                <h1>Airport Info Searcher</h1>
+            </div>
+            <div class="background">
+            </div>
+        </div>
+        <div class="search-block">
+            <form class="search">
+                <label for="search" class="input-label">
+                    <input type="text"
+                           onkeyup=''
+                           id="search"
+                           placeholder="Enter the Airport Code"
+                    >
+                    <div class="last-title">Search History</div>
+
+                </label>
+                <label for="submit" id="search-label">
+                    <input type="submit" value="search" id="submit">
+                </label>
+                <div class="suggestion">
+                    <div class="last-search">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</header>
+<main>
+    <div class="display">
+    </div>
+</main>
+<footer>
+    <div class="about">
+        <p>&#169; Powered By Sayri Quinchiguango
+        </p>
+    </div>
+</footer>
+<script src="./js/main.js" type="module"></script>
+</body>
+</html>

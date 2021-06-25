@@ -7,31 +7,33 @@ btn1.onclick = function () {
 }
 
 
-
-async function customFetch(url = api)  {
+async function customFetch(url = api) {
     try {
         const response = await fetch(url);
-        return await response.json();
+         const response1 = await response.json();
+         console.log(response1);
+        return response1;
     } catch (e) {
         throw new Error(e.message);
     }
 }
 
-async function fetchPeople (url) {
+async function fetchPeople(url) {
     return await customFetch(url)
 }
+
 // function renderPeople(peoples) {
 //     const display = document.querySelector('.display')
 //     display.innerHTML = peoples.map(people => `${people.name}`)
 //
 // }
 async function handleDisplay(url = api) {
-    const { results, next, previous, count } = await fetchPeople(url);
+    const {results, next, previous, count} = await fetchPeople(url);
     renderPeople(results)
     if (next) {
         renderNextButton(next)
     }
-    if(previous){
+    if (previous) {
         renderPrevButton(previous)
     }
     let number = 1
@@ -43,11 +45,12 @@ async function handleDisplay(url = api) {
     }
 
 }
-function renderPageNumber(number){
+
+function renderPageNumber(number) {
     const display = document.querySelector('.display')
     const button = document.createElement('button');
     button.innerHTML = number;
-    button.onclick = function (){
+    button.onclick = function () {
         handleDisplay(api + '/?page=' + number
         )
     }
@@ -103,16 +106,6 @@ function renderPrevButton(prevUrl) {
     container.appendChild(prevButton);
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 //

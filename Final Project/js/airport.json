@@ -1,0 +1,118 @@
+[
+  {
+
+    "code": "CWB",
+    "city": "Curitiba",
+    "country": "Brazil",
+    "name": "Alfonso Pena Airport"
+  },
+  {
+    "code": "CUZ",
+    "city": "Cuzco",
+    "country": "Peru",
+    "name": "Alejandro Velasco Astete International Airport"
+  },
+  {
+    "code": "MVD",
+    "city": "Montevideo",
+    "country": "Uruguay",
+    "name": "Carrasco International /General C L Berisso Airport"
+  },
+  {
+    "code": "SCL",
+    "city": "Santiago",
+    "country": "Chile",
+    "name": "Comodoro Arturo Merino Benítez International Airport"
+  },
+  {
+    "code": "CGH",
+    "city": "Sao Paulo",
+    "country": "Brazil",
+    "name": "São Paulo–Congonhas Airport"
+  },
+  {
+    "code": "LTX",
+    "city": "Latacunga",
+    "country": "Ecuador",
+    "name": "ACotopaxi International Airport"
+  },
+  {
+    "code": "SSA",
+    "city": "Salvador",
+    "country": "Brazil",
+    "name": "Deputado Luiz Eduardo Magalhães International Airport"
+  },
+  {
+  "code": "BOG",
+  "city": "Bogota",
+  "country": "Colombia",
+  "name": "El Dorado International Airport"
+},
+  {
+  "code": "BLA",
+  "city": "Barcelona",
+  "country": "Venezuela",
+  "name": "General José Antonio Anzoategui International Airport"
+},  {
+  "code": "CWB",
+  "city": "Curitiba",
+  "country": "Brazil",
+  "name": "Alfonso Pena Airport"
+},  {
+  "code": "NAT",
+  "city": "Natal",
+  "country": "Brazil",
+  "name": "Governador Aluízio Alves International Airport"
+},  {
+  "code": "FLN",
+  "city": "Florianópolis",
+  "country": "Brazil",
+  "name": "Hercílio Luz International Airport"
+},  {
+  "code": "LIM",
+  "city": "Lima",
+  "country": "Peru",
+  "name": "Jorge Chávez International Airport"
+},  {
+  "code": "UIO",
+  "city": "Quito",
+  "country": "Ecuador",
+  "name": "Mariscal Sucre International Airport"
+},  {
+  "code": "EZE",
+  "city": "Buenos Aires",
+  "country": "Argentina",
+  "name": "Ministro Pistarini International Airport"
+},  {
+  "code": "BSB",
+  "city": "Brasilia",
+  "country": "Brazil",
+  "name": "Brasília International Airport"
+},
+  {
+    "code": "GIG",
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "name": "Galeão International Airport"
+  }, {
+  "code": "CCS",
+  "city": "Caracas",
+  "country": "Venezuela",
+  "name": "Simón Bolívar International Airport"
+}, {
+  "code": "CNF",
+  "city": "Belo Horizonte",
+  "country": "Brazil",
+  "name": "\tTancredo Neves International Airport"
+}, {
+  "code": "BEL",
+  "city": "Belem",
+  "country": "Brazil",
+  "name": "Val de Cans/Júlio Cezar Ribeiro International Airport"
+}, {
+  "code": "VVI",
+  "city": "Santa Cruz",
+  "country": "Bolivia",
+  "name": "Viru Viru International Airport"
+}
+]

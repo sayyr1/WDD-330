@@ -22,7 +22,7 @@ function inputValue(e){
     }
     inputArray.push(items)
 
-    // save to the local Storaga
+    // save to the local Storage.
     localStorage.setItem('key', JSON.stringify(inputArray))
 
     createInputs(inputArray, display);

@@ -1,0 +1,478 @@
+// Color Variables
+$first-color: #f1f7db;
+$second-color: #1e5f90;
+$third-color: #0a1004;
+$white: #ffff;
+
+
+// Size Variables
+$large-view: 64em;
+$medium-view: 32rem;
+
+// Media Query for Sizes
+@mixin MQ($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+/**
+--------------------
+HEADER
+--------------------
+*/
+h1, h2, h3 {
+  font-family: "Ubuntu", serif;
+}
+
+p, li, a {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+html {
+  background-color: $first-color;
+  border-radius: 10px;
+}
+
+header, main {
+  @include MQ($large-view) {
+    display: block;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  @include MQ($large-view) {
+    display: block;
+  }
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  @include MQ($large-view) {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 200px;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 4.5rem;
+    @include MQ($large-view) {
+      font-size: 2rem;
+      text-align: start;
+    }
+  }
+}
+
+.logo {
+  width: 200px;
+  padding: 10px;
+  @include MQ($large-view) {
+    width: 80px;
+    padding: 0;
+  }
+}
+
+// Hero image
+.hero {
+  @include MQ($large-view) {
+    display: flex;
+  }
+}
+
+.background {
+  width: 100%;
+  content: url("/Final Project/src/airport_background.png");
+  animation: hero 4s alternate forwards;
+
+}
+
+form.search {
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  display: grid;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 4rem;
+  justify-items: center;
+  margin-top: 5rem;
+  //animation: background 3s linear forwards;
+}
+
+.search-block {
+  @include MQ($large-view) {
+    display: flex;
+    flex-direction: row;
+    padding: 0 15rem;
+  }
+}
+
+#search {
+  height: 10rem;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 5px 7px 20px 1px $second-color;
+  @include MQ($medium-view) {
+    height: 7rem;
+    width: 100%;
+  }
+  @include MQ($large-view) {
+    height: 4rem;
+    width: fit-content;
+  }
+}
+
+
+.input-label {
+  border-radius: 20px;
+  padding-left: 2rem;
+  @include MQ($large-view) {
+    padding: 0 3rem;
+    display: block;
+    width: 75%;
+    font-size: 1.8rem;
+  }
+}
+
+#submit {
+  width: 13rem;
+  height: 7rem;
+  border-radius: 20px;
+  box-shadow: 5px 7px 20px 1px $second-color;
+  font-size: 4rem;
+  background-color: $second-color;
+  color: $first-color;
+  @include MQ($large-view) {
+    height: 4rem;
+    font-size: 2rem;
+    width: max-content;
+  }
+}
+
+#search-label {
+  align-self: flex-start;
+  margin-top: 7px;
+  @include MQ($large-view) {
+    margin-top: -10px;
+  }
+  }
+
+/**
+  -------------
+  FOOTER
+  ---------------
+*/
+.about {
+  margin-top: 12rem;
+  display: block;
+  background-color: $third-color;
+  height: 5rem;
+  max-width: 100%;
+  color: $white;
+  text-align: center;
+
+  @include MQ($medium-view) {
+    margin-top: 5rem;
+  }
+
+  p {
+    font-size: 2.2rem;
+    padding: 1rem 4rem;
+  }
+}
+
+/*
+------------------------
+DISPLAY CARDS (Information)
+------------------------
+*/
+
+.display {
+  color: $white;
+  display: block;
+  margin: 5rem auto 0 auto;
+  width: 90%;
+  background-color: $second-color;
+  border: 1px solid $first-color;
+  box-shadow: 4px 7px 20px 0 #000000b3;
+  @include MQ($large-view) {
+    display: grid;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    color: $second-color;
+    padding: 2rem;
+    text-align: left;
+    background-color: $first-color;
+    width: fit-content;
+    box-shadow: 4px 7px 20px 0 #000000b3;
+    @include MQ($large-view) {
+      font-size: 2rem;
+      width: auto;
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+
+    }
+  }
+}
+
+.display ul {
+  li:nth-of-type(1) {
+    text-align: center;
+    @include MQ($medium-view) {
+      font-size: 4rem;
+    }
+    @include MQ($large-view) {
+      font-size: 2.5rem;
+    }
+  }
+
+  li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(4), li:nth-of-type(5) {
+    display: flex;
+    width: 100%;
+    margin: auto 0;
+    align-items: center;
+  }
+
+  li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(4), li:nth-of-type(5), a {
+    @include MQ($medium-view) {
+      font-size: 3rem;
+    }
+    @include MQ($large-view) {
+      font-size: 1.5rem;
+    }
+  }
+
+
+  li:nth-of-type(2):before {
+    content: url("/Final Project/src/location.png");
+  }
+
+  li:nth-of-type(3):before {
+    content: url("/Final Project/src/phone.png");
+  }
+
+  li:nth-of-type(4):before {
+    content: url("/Final Project/src/postal-code.png");
+
+  }
+
+  li:nth-of-type(5):before {
+    content: url("/Final Project/src/internet.png");
+    background-color: white;
+    padding-top: 20px;
+    border-radius: 31px
+  }
+}
+
+ul {
+  @include MQ($large-view) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+/*-------------------------------------
+FOR THE LINK OF THE AIRPORT  INFORMATION
+----------------------------------------
+ */
+ul {
+  li {
+    a {
+      color: $white;
+    }
+  }
+}
+
+span.hl {
+  background-color: #0a0b0d;
+  color: white;
+}
+
+/*
+---------------------------
+FOR THE LIST
+---------------------------
+*/
+.suggestion, .last-search {
+  overflow-y: auto;
+  height: 20rem;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.data-list {
+  @include MQ($large-view) {
+    width: 20rem;
+    font-size: 19px;
+    margin-left: 22px;
+    &:nth-of-type(odd) {
+      background-color: rgba(176, 168, 168, 0.35);
+    }
+  }
+  font-weight: 600;
+  background-color: $white;
+  cursor: pointer;
+  list-style-type: none;
+  font-size: 3rem;
+  border: 1px solid $first-color;
+  display: block;
+  margin-left: 41px;
+  padding: 1rem;
+}
+
+
+
+.data-list:hover {
+  box-shadow: -40px 23px 0px 9px rgba(0, 0, 0, 0);
+  background-color: gray;
+}
+
+.last-search {
+  overflow-y: auto;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-start;
+  li {
+    font-size: 2.5rem;
+  }
+
+}
+
+
+.last-search li {
+  cursor: pointer;
+
+}
+
+.hola {
+  margin-top: -20rem;
+}
+
+div.last-title {
+  font-size: 3rem;
+  padding: 20px;
+  color: darkred;
+  @include MQ($large-view){
+    font-size: 2rem;
+  }
+}
+
+
+div.items-saved {
+  border-bottom: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: fit-content;
+  @include MQ($large-view) {
+    width: 20rem;
+    font-size: 19px;
+    margin-left: 22px;
+  }
+  font-weight: 600;
+  background-color: $white;
+  cursor: pointer;
+  list-style-type: none;
+  font-size: 3rem;
+  padding: 1rem;
+
+  li.saved-items{
+    @include MQ($large-view){
+      font-size: 23px;
+    }
+  }
+
+}
+button#last-delete {
+  align-items: flex-start;
+  width: 10rem;
+  font-size: 44px;
+  border-radius: 10px;
+  background-color: darkblue;
+  color: white;
+  @include MQ($large-view){
+    font-size: 20px;
+    width: fit-content;
+  }
+
+
+}
+
+/*
+------------------------
+          FOOTER
+-------------------------
+ */
+footer div.about p {
+  @include MQ($large-view) {
+    font-size: 1.5rem;
+  }
+}
+
+
+/*
+---------------------------
+KEYFRAMES for Animation
+---------------------------
+*/
+
+@keyframes hero {
+  0% {
+
+    opacity: 0;
+    transform: translateX(-100);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-50);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes background {
+  0% {
+    opacity: 0;
+    transform: translateX(-100);
+
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    margin-top: -45rem;
+
+  }
+
+}

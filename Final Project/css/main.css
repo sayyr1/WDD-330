@@ -62,6 +62,7 @@ html {
 }
 
 .logo {
+  animation: background 2s ease-in-out forwards;
   width: 200px;
   padding: 10px;
 }
@@ -439,16 +440,14 @@ KEYFRAMES for Animation
 }
 @keyframes background {
   0% {
-    opacity: 0;
-    transform: translateX(-100);
+    transform: rotate(-45deg);
   }
   50% {
-    opacity: 0;
+    transform: rotate(90deg);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
-    margin-top: -45rem;
+    transform: rotate(0);
   }
 }
 

@@ -79,6 +79,13 @@
   "country": "Ecuador",
   "name": "Mariscal Sucre International Airport"
 },  {
+  "code": "GYE",
+  "city": "Guayaquil",
+  "country": "Ecuador",
+  "name": "Aeropuerto Internacional José Joaquín de Olmedo"
+},
+
+  {
   "code": "EZE",
   "city": "Buenos Aires",
   "country": "Argentina",
@@ -114,5 +121,162 @@
   "city": "Santa Cruz",
   "country": "Bolivia",
   "name": "Viru Viru International Airport"
+},
+  {
+    "_comment": "Airports of USAA",
+  "code": "ATL",
+  "city": "Atlanta, GA",
+  "country": "USA",
+  "name": "Hartsfield-Jackson International Airport"
+},{
+  "code": "DFW",
+  "city": "Dallas & Ft. Worth, TX",
+  "country": "USA",
+  "name": "Dallas/Fort Worth International Airport"
+},{
+  "code": "DEN",
+  "city": "Denver, CO",
+  "country": "USA",
+  "name": "Denver International Airport"
+},{
+  "code": "ORD",
+  "city": "Chicago, IL",
+  "country": "USA",
+  "name": "O'Hare International Airport"
+},{
+  "code": "LAX",
+  "city": "Los Angeles, CA",
+  "country": "USA",
+  "name": "Los Angeles International Airport"
+},{
+  "code": "CLT",
+  "city": "Charlotte, NC",
+  "country": "USA",
+  "name": "Charlotte Douglas International Airport"
+},{
+  "code": "LAS",
+  "city": "Las Vegas, NV",
+  "country": "USA",
+  "name": "Hartsfield-Jackson International Airport\tMcCarran International Airport"
+},{
+  "code": "PHX",
+  "city": "Phoenix, AZ",
+  "country": "USA",
+  "name": "Hartsfield-Jackson International Airport"
+},{
+  "code": "MCO",
+  "city": "Orlando, FL",
+  "country": "USA",
+  "name": "Orlando International Airport"
+},{
+  "code": "SEA",
+  "city": "Miami, FL",
+  "country": "USA",
+  "name": "Seattle–Tacoma International Airport"
+},{
+  "code": "MIA",
+  "city": "Miami, FL",
+  "country": "USA",
+  "name": "Miami International Airport"
+},{
+  "code": "IAH",
+  "city": "HoUSAton, TX",
+  "country": "USA",
+  "name": "George BUSAh Intercontinental Airport"
+},{
+  "code": "JFK",
+  "city": "New York City, NY",
+  "country": "USA",
+  "name": "John F. Kennedy International Airport["
+},{
+  "code": "FLL",
+  "city": "Fort Lauderdale, FL",
+  "country": "USA",
+  "name": "Fort Lauderdale–Hollywood International Airport"
+},{
+  "code": "SFO",
+  "city": "San Francisco, CA",
+  "country": "USA",
+  "name": "San Francisco International Airport"
+},{
+  "code": "EWR",
+  "city": "Newark & New York City, NJ",
+  "country": "USA",
+  "name": "Newark Liberty International Airport"
+},{
+  "code": "MSP",
+  "city": "Minneapolis & Saint Paul, MN",
+  "country": "USA",
+  "name": "Minneapolis–Saint Paul International Airport"
+},{
+  "code": "DTW",
+  "city": "Detroit, MA",
+  "country": "USA",
+  "name": "Logan International Airport"
+},{
+  "code": "SLC",
+  "city": "Salt Lake City, UT",
+  "country": "USA",
+  "name": "Salt Lake City International Airport"
+},{
+  "code": "PHL",
+  "city": "Philadelphia, MD",
+  "country": "USA",
+  "name": "Philadelphia International Airport"
+},{
+  "code": "BWI",
+  "city": "Baltimore, MD",
+  "country": "USA",
+  "name": "Baltimore/Washington International Airport"
+},{
+  "code": "TPA",
+  "city": "Tampa, FL",
+  "country": "USA",
+  "name": "Tampa International Airport"
+},{
+  "code": "SAN",
+  "city": "San Diego, CA",
+  "country": "USA",
+  "name": "San Diego International Airport"
+},{
+  "code": "MDW",
+  "city": "Chicago, IL",
+  "country": "USA",
+  "name": "Chicago Midway International Airport"
+},{
+  "code": "IAD",
+  "city": "Washington, D.C, VA",
+  "country": "USA",
+  "name": "Washington Dulles International Airport"
+},{
+  "code": "BNA",
+  "city": "Nashville, TN",
+  "country": "USA",
+  "name": "Nashville International Airport"
+},{
+  "code": "MDW",
+  "city": "Chicago, IL",
+  "country": "USA",
+  "name": "Chicago Midway International Airport"
+},{
+  "code": "LGA",
+  "city": "New York, NY",
+  "country": "USA",
+  "name": "LaGuardia Airport"
+},{
+  "code": "DAL",
+  "city": "Dallas, TX",
+  "country": "USA",
+  "name": "Dallas Love Field"
+},{
+  "code": "DCA",
+  "city": "Washington, D.C., VA",
+  "country": "USA",
+  "name": "Ronald Reagan Washington National Airport"
+},{
+  "code": "PDX",
+  "city": "Portland, OR",
+  "country": "USA",
+  "name": "Portland International Airport"
 }
 ]

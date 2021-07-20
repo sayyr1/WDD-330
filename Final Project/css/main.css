@@ -80,7 +80,7 @@ html {
 
 .background {
   width: 100%;
-  content: url("/Final Project/src/airport_background.png");
+  content: url("https://github.com/sayyr1/WDD-330/blob/main/Final%20Project/src/airport_background.png?raw=true");
   animation: hero 4s alternate forwards;
 }
 
@@ -257,13 +257,13 @@ DISPLAY CARDS (Information)
   }
 }
 .display ul li:nth-of-type(2):before {
-  content: url("/Final Project/src/location.png");
+  content: url("https://github.com/sayyr1/WDD-330/blob/main/Final%20Project/src/location.png?raw=true");
 }
 .display ul li:nth-of-type(3):before {
-  content: url("/Final Project/src/phone.png");
+  content: url("https://github.com/sayyr1/WDD-330/blob/main/Final%20Project/src/phone.png?raw=true");
 }
 .display ul li:nth-of-type(4):before {
-  content: url("/Final Project/src/postal-code.png");
+  content: url("https://github.com/sayyr1/WDD-330/blob/main/Final%20Project/src/postal-code.png?raw=true");
 }
 .display ul li:nth-of-type(5):before {
   content: url("/Final Project/src/internet.png");

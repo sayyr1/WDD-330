@@ -102,6 +102,7 @@ form.search {
     display: flex;
     flex-direction: row;
     padding: 0 15rem;
+    margin-top: -2rem;
   }
 }
 
@@ -152,6 +153,10 @@ form.search {
     font-size: 2rem;
     width: max-content;
   }
+}
+
+#submit:hover, #search:hover {
+  transform: scale(1.05);
 }
 
 #search-label {
@@ -308,6 +313,10 @@ FOR THE LIST
   justify-content: center;
 }
 
+.suggestion:not(.last-search) {
+  margin-left: 2rem;
+}
+
 .data-list {
   font-weight: 600;
   background-color: #ffff;
@@ -406,6 +415,22 @@ button#last-delete {
     font-size: 20px;
     width: fit-content;
   }
+}
+
+.instructions {
+  font-size: 3rem;
+  text-align: center;
+  box-shadow: 9px 5px 20px #4a49373d;
+}
+@media only screen and (min-width: 64em) {
+  .instructions {
+    font-size: 2rem;
+  }
+}
+
+main, header {
+  padding: 2rem;
+  box-shadow: 0px -7px 13px 0px #4a49373d;
 }
 
 /*

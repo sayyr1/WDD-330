@@ -1,3 +1,7 @@
+/*
+* Function to fetch the API using async function.
+* */
+
 export async function customFetch(url) {
     try {
         const response = await fetch(url, {
@@ -36,13 +40,21 @@ export function saveInLocalStorage(key, array) {
 
 /*
 * Find and Match function
+* // This is an adaptation from JavaScript 30 video tutorials.
 * */
 export function findMatches(wordToMatch, cities) {
     return cities.filter(place => {
-        // here we need to figure out if the city or state matches what was searched
         const regex = new RegExp(wordToMatch, 'gi');
         return place.code.match(regex) || place.city.match(regex) || place.country.match(regex) || place.name.match(regex)
     });
 }
 
+
+
+// Airport Information, filtering the data from Json File.
+const endpoint = 'js/airport.json';
+export const cities = [];
+ fetch(endpoint)
+    .then(blob => blob.json())
+    .then(data => cities.push(...data));
 

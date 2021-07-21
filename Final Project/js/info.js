@@ -43,7 +43,6 @@ export function select(element){
         `
     }).join('');
     const savedItems = document.querySelectorAll('.saved-items')
-    console.log(savedItems)
     savedItems.forEach(save =>{
         select(save)
     })
